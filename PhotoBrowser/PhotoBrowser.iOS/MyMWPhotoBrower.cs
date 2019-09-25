@@ -42,12 +42,12 @@ namespace Stormlion.PhotoBrowser.iOS
                 DisplayActionButton = _photoBrowser.ActionButtonPressed != null,
 
                 ZoomPhotosToFill = _photoBrowser.iOS_ZoomPhotosToFill
-
+                
             };
 
-            
+            browser.WantsFullScreenLayout = true;
             browser.SetCurrentPhoto((nuint)_photoBrowser.StartIndex);
-
+            browser.View.BackgroundColor = _photoBrowser.BackgroundColor.ToUIColor();
 
             var window = UIApplication.SharedApplication.KeyWindow;
             var vc = window.RootViewController;
@@ -55,8 +55,12 @@ namespace Stormlion.PhotoBrowser.iOS
             {
                 vc = vc.PresentedViewController;
             }
-            
-            vc.PresentViewController(new UINavigationController(browser), true, null);
+            var viewController = new UINavigationController(browser);
+            //double iOSVersion = double.Parse(UIDevice.CurrentDevice.SystemVersion);
+            //if(iOSVersion >= 13)
+            //    viewController.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+            viewController.View.BackgroundColor = _photoBrowser.BackgroundColor.ToUIColor();
+            vc.PresentViewController(viewController, true, null);
         }
 
         public override MWPhoto GetPhoto(MWPhotoBrowser photoBrowser, nuint index) => _photos[(int)index];

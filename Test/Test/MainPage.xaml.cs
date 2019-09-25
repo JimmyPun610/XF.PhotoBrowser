@@ -76,14 +76,13 @@ namespace Test
                     Debug.WriteLine($"Clicked {index}");
                     PhotoBrowser.Close();
                 },
-                EnableGrid = true,
-                BackgroundColor = Color.White,
+                EnableGrid = false,
+                BackgroundColor = Color.Black,
                 DidDisplayPhoto = (index) =>
                 {
                     Debug.WriteLine($"Selection changed: {index}");
                 },
 
-                Android_ContainerPaddingPx = 20,
                 iOS_ZoomPhotosToFill = false
             }.Show();
         }

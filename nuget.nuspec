@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>PhotoBrowser.Forms</id>
-    <version>0.1.4</version>
-    <authors>Marko Rothstein</authors>
+    <id>XF.PhotoBrowser</id>
+    <version>0.1.5</version>
+    <authors>Jimmy Pun</authors>
     <owners>Marko Rothstein</owners>
-    <projectUrl>https://github.com/stormlion227/PhotoBrowser.Forms</projectUrl>
-    <licenseUrl>https://github.com/stormlion227/PhotoBrowser.Forms/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/JimmyPun610/XF.PhotoBrowser</projectUrl>
+    <licenseUrl>https://github.com/JimmyPun610/XF.PhotoBrowser/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Full screen image viewer(Xamarin.Forms) that includes "pinch to zoom" and "swipe to dismiss" gestures.</description>
     <summary>Full screen image viewer(Xamarin.Forms) that includes "pinch to zoom" and "swipe to dismiss" gestures.</summary>
-    <releaseNotes>First release.</releaseNotes>
-    <copyright>© StormLion 2018</copyright>
+    <releaseNotes>Change action button for android to share, add number of photos and close button</releaseNotes>
+    <copyright></copyright>
     <tags>xamarin forms photo image pinch zoom swipe dismiss MWPhotoBrowser FrescoImageViewer</tags>
     <dependencies>
       <group>

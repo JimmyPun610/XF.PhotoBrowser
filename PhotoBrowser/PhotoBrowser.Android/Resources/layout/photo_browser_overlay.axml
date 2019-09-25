@@ -2,13 +2,32 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageButton
+    <ImageView
         android:id="@+id/btnShare"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/btn_action_photobrowser_overlay" />
+        android:layout_margin="12dp"
+        android:src="@drawable/share"/>
+    <ImageButton
+        android:id="@+id/closeBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="12dp"
+        android:background="@drawable/mr_dialog_close_dark"/>
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:gravity="center_horizontal"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_margin="14dp"/>
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"

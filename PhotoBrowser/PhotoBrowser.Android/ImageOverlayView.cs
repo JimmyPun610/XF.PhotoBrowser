@@ -17,8 +17,9 @@ namespace Stormlion.PhotoBrowser.Droid
     public class ImageOverlayView : RelativeLayout, ImageViewer.IOnImageChangeListener
     {
         protected TextView tvDescription;
-
-        protected ImageButton btnAction;
+        protected TextView tvSummary;
+        protected ImageButton btnClose;
+        protected ImageView btnAction;
 
         protected PhotoBrowser _photoBrowser;
 
@@ -34,8 +35,13 @@ namespace Stormlion.PhotoBrowser.Droid
         {
             View view = Inflate(Context, Resource.Layout.photo_browser_overlay, this);
             tvDescription = view.FindViewById<TextView>(Resource.Id.tvDescription);
-            btnAction = view.FindViewById<ImageButton>(Resource.Id.btnShare);
-
+            btnAction = view.FindViewById<ImageView>(Resource.Id.btnShare);
+            tvSummary = view.FindViewById<TextView>(Resource.Id.tvSummary);
+            btnClose = view.FindViewById<ImageButton>(Resource.Id.closeBtn);
+            btnClose.Click += (o, e) =>
+            {
+                PhotoBrowser.Close();
+            };
             if(_photoBrowser.ActionButtonPressed != null)
             {
                 btnAction.Click += (o, e) =>
@@ -52,6 +58,7 @@ namespace Stormlion.PhotoBrowser.Droid
         public void OnImageChange(int p0)
         {
             tvDescription.Text = _photoBrowser.Photos[p0].Title;
+            tvSummary.Text = $"{p0 + 1} / {_photoBrowser.Photos.Count}";
             _currentIndex = p0;
 
             _photoBrowser.DidDisplayPhoto?.Invoke(p0);

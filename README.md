@@ -2,8 +2,6 @@
 
 Full screen image viewer(Xamarin.Forms) that includes "pinch to zoom" and "swipe to dismiss" gestures.
 
-[![NuGet](https://img.shields.io/nuget/v/PhotoBrowser.Forms.svg)](https://www.nuget.org/packages/PhotoBrowser.Forms/)
-
 Supports Android and iOS.
 * Android library from : https://github.com/stfalcon-studio/FrescoImageViewer
 * iOS library from : https://github.com/mwaterfall/MWPhotoBrowser
@@ -21,7 +19,7 @@ Supports Android and iOS.
 
 ## Setup
 
-* Install the [nuget package](https://www.nuget.org/packages/PhotoBrowser.Forms) in portable and all platform specific projects.
+* Install the [nuget package](https://www.nuget.org/packages/XF.PhotoBrowser/) in portable and all platform specific projects.
 
 ### Android
 
